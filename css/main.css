@@ -2,26 +2,33 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700);
 @import url(http://fonts.googleapis.com/css?family=Cardo:400,400italic,700);
 
-
 body {
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    color: #6c7279;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  color: #6c7279;
 }
 h5 {
   font-size: 14px;
   color: #2d3033;
   text-transform: uppercase;
   font-weight: 700; }
+
 p {
     font-size: 14px;
     line-height: 22.4px;
     color: #6c7279;
-}
+  }
 
-.section1
+ul,li
 {
-    padding: 100px,auto !important;
+    display: block;
+    padding: 0;
+    margin: 0 50px;
+}
+a {
+    color: #e84545; }
+.section{
+  padding: 100px 0;
 }
 .navbar
 {   border-style: none none solid none;
@@ -53,12 +60,7 @@ p {
     /* background-color: #30334c;*/
     text-align: center;
 }
-ul,li
-{
-    display: block;
-    padding: 0;
-    margin: 0 50px;
-}
+
 .title
 {
     background-image: url(../img/banner.jpg);
@@ -93,7 +95,7 @@ ul,li
     padding-top: 250px;
 }
 .buttom_red
-{  text-transform: uppercase;
+{   text-transform: uppercase;
     background-color: #e84545;
     color: white;
     font-size: 13px;
@@ -111,76 +113,87 @@ ul,li
     background-color: #cf1a1a  !important;
 
 }
-.vova
-{
-    height:840px;
-}
 .photo_pad
 {
     padding: 1px;
+    overflow: hidden;
 }
 .photo_gallery
 {
     overflow: hidden;
+    min-height: 350px;
 }
 
 .img_gallery
 {   position: relative;
     height:350px;
-
     overflow: hidden;
 }
-.img_gallery:hover
+.text_photo
+{
+  width: 100%;
+}
+.text_photo h5
+{   position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    text-align: center;
+}
+
+.text_photo p { 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    text-align: center;
+}
+
+.img_p 
+{
+  width: 100%;
+  height: 100%;
+}
+.photo_pad:hover
 {
     background-color: #e21916;
-
 }
-.img_p:hover
+.work-box:hover .img_p
 {
-    opacity:0.5;
+    opacity:0.7;
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
     transition:  transform 0.5s;
-}
-
-.photo_gallery
-{
-    min-height: 350px;
 
 }
-.photo_pad:hover .text_photo {
-  opacity: 1;
+
+
+.photo_pad:hover .text_photo h5  {
+
+  bottom: 0;
+  height: 50%;
+}
+.photo_pad:hover .text_photo p  {
+
+
+  height: 40%;
 }
 .photo_pad:hover .img_gallery {
   opacity: 1;
 }
-.text_photo
-{   display: block;
-    color:white;
-    font-size: 14px;
-    font-weight: 700;
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-    top: 50%;
-    width: 100%;
-    opacity: 0;
 
 
-}
-.asda
-{
-    visibility: hidden;
-}
-/*
-@media (min-width: 1200px) {
-    body {
-        width: 1170px;
-    }
-}*/
-a {
-    color: #e84545; }
+
+
 
 /*VS*/
 .features span

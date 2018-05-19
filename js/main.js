@@ -14,17 +14,4 @@ $(document).ready(function(){
         }
     });
 
-    // Waypoints
-    $('.text_photo').waypoint(function() {
-        $('.text_photo').addClass('animated fadeIn');
-    }, {
-        offset: '75%'
-    });
-
-    
-    // Fancybox
-    $('.work-box').fancybox();
-
-
-
 });
