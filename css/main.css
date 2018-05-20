@@ -19,7 +19,7 @@ p {
     color: #6c7279;
   }
 
-ul,li
+.ml-auto ul li
 {
     display: block;
     padding: 0;
@@ -166,7 +166,7 @@ a {
 {
     background-color: #e21916;
 }
-.work-box:hover .img_p
+.work-box:hover img
 {
     opacity:0.7;
     -webkit-transform: scale(1.3);
@@ -188,13 +188,38 @@ a {
 
   height: 40%;
 }
-.photo_pad:hover .img_gallery {
-  opacity: 1;
+
+.social-icons a {
+    border: 1px solid #e8ecee;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    color: #c6cacc;
+    display: block;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+    width: 40px;
 }
-
-
-
-
+.social-icons {
+    margin-top: 30px;
+    padding:  0 30px;
+}
+ul, il {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.social-icons li  {
+    float: left;
+}
+.social-icons a:hover {
+    background-color: #e84545;
+    border-color: #e84545;
+    color: #fff; }
 
 /*VS*/
 .features span
@@ -219,6 +244,27 @@ a {
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
 }
+
+.photo_author, .author_text
+{
+    overflow: hidden;
+    height: 270px;
+    padding: 0 30px;
+
+}
+.author_text h4
+{   padding-top: 30px;
+    font-weight: 400;
+    font-size: 22px;
+    color: #2d3033;
+}
+.author_text h5 {
+    color: #e84545;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
 /* ==========================================================================
     Font Icon (http://www.elegantthemes.com/blog/freebie-of-the-week/free-line-style-icons)
 ========================================================================== */
