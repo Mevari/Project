@@ -13,6 +13,9 @@ $(document).ready(function(){
             $(".navbar").css("border-style", "none none solid none");
         }
     });
+ $('.flexslider').flexslider({
+        animation: "slide"
+    });
 
-
+  $(".work-box").fancybox({  });
 });
