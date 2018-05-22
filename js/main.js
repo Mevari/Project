@@ -3,14 +3,14 @@ $(document).ready(function(){
         var scroll = $(window).scrollTop();
 
         if ( scroll > 50) {
-            $(".header1").css("background-color", "#2e304a");
-            $(".header1").css("height", "74px");
-            $(".navbar").css("border-style", "none");
+            $(".navbar-dark").css("background-color", "#2e304a");
+            $(".navbar-dark").css("min-height", "74px");
+            $(".navbar-dark").css("border-style", "none");
 
         } else {
-            $(".header1").css("background-color", "transparent");
-            $(".header1").css("height", "100px");
-            $(".navbar").css("border-style", "none none solid none");
+            $(".navbar-dark").css("background-color", "transparent");
+            $(".navbar-dark").css("min-height", "100px");
+            $(".navbar-dark").css("border-style", "none none solid none");
         }
     });
  $('.flexslider').flexslider({
@@ -18,4 +18,18 @@ $(document).ready(function(){
     });
 
   $(".work-box").fancybox({  });
+
+  $("#navbarSupportedContent").on("click", "a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top},900);
+    });
 });
